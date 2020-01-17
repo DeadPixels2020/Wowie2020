@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
@@ -11,11 +12,14 @@ public class DayNightCycle : MonoBehaviour
 
     private bool isDay;
     private float chengIntensityTo;
+    
+    private IDayNightSeter dayNightSeter;
 
     private void Awake() {
         _light = GetComponent<Light2D>();
         chengIntensityTo = 0;
         isDay = true;
+        dayNightSeter = GameEvents.instance;
     }
 
     private void Update() {
@@ -24,11 +28,15 @@ public class DayNightCycle : MonoBehaviour
         if(_light.intensity < 0.01f && isDay){
             isDay = false;
             chengIntensityTo = 1;
+            dayNightSeter.onGettingDark();
         }
         if(_light.intensity > 0.98f && !isDay){
             isDay = true;
             chengIntensityTo = 0;
+            dayNightSeter.onGettingBrighter();
         }
     }
+
+    
 
 }
