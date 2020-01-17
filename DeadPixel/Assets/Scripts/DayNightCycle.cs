@@ -21,10 +21,11 @@ public class DayNightCycle : MonoBehaviour
     private void Update() {
         _light.intensity = Mathf.Lerp(_light.intensity,chengIntensityTo,Time.deltaTime * chengScale);
 
-        if(_light.intensity < 0.01){
+        if(_light.intensity < 0.01f && isDay){
             isDay = false;
             chengIntensityTo = 1;
-        }else if(_light.intensity >= 9.98){
+        }
+        if(_light.intensity > 0.98f && !isDay){
             isDay = true;
             chengIntensityTo = 0;
         }
