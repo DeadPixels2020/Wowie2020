@@ -21,8 +21,10 @@ MonoBehaviour:
   stats:
     hp: 0
     sheelds: 0
-  prototypeBuilding: {fileID: 0}
-  finishBuilding: {fileID: 0}
+  prototypeBuilding: {fileID: 5304811389186089807, guid: fc4b1328878e48f449b84a5220d1890a,
+    type: 3}
+  finishBuilding: {fileID: 8905003645599209454, guid: b37b92c8ef16afc49a824d279523fe08,
+    type: 3}
   florDetcting: 0
   buildLayer:
     serializedVersion: 2

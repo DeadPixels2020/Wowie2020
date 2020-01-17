@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2614705891
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ProbsLayer
+    uniqueID: 4275632769
+    locked: 0
+  - name: OverlapLayer
+    uniqueID: 3505381397
     locked: 0
