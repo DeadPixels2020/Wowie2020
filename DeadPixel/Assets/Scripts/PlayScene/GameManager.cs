@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    int Material;
+    int Material = 500;
 
-    public GameObject NotEnoughCash;
+    public UIPlaySceneManager UIPlay;
 
     private BuildSystem buildSystem;
     [SerializeField] private GameObject wall;
@@ -33,8 +33,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyTurret2()
@@ -46,8 +45,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyTurret3()
@@ -59,8 +57,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyTurret4()
@@ -72,8 +69,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyTurret5()
@@ -85,8 +81,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyTurret6()
@@ -98,8 +93,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyTrap()
@@ -111,8 +105,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
     public void BuyBarrier()
@@ -125,8 +118,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
-            NotEnoughCash.SetActive(true);
+            UIPlay.OpenNoMatPanel();
         }
     }
 }
