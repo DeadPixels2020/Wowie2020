@@ -32,8 +32,8 @@ public class BuilderContoller : MonoBehaviour,ICursoreControler
         cursor.Selected = null;
     }
 
-    private void OnBuild(){
-
+    private void OnBuild()
+    {
         if( !TryToPlace() )
             return;
 
@@ -75,8 +75,8 @@ public class BuilderContoller : MonoBehaviour,ICursoreControler
     }
 
 
-    private bool TryToPlace(){
-
+    private bool TryToPlace()
+    {
         Collider2D hit = null;
 
         switch(building.FlorDetcting){
