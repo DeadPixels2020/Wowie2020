@@ -9,7 +9,7 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
 
     private int matirial;
 
-    public int Matirial{get;}
+    public int Matirial{get => matirial;}
 
     private void Awake() {
         if(Pocket == null){
@@ -28,7 +28,8 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
     public void Pay(Costs costs)
     {
         matirial -= costs.Matirial;
-        OnMatirialAmountChenged(matirial);
+        if(OnMatirialAmountChenged != null)    
+            OnMatirialAmountChenged(matirial);
     }
 
     public bool TryToPay(Costs costs)
@@ -44,7 +45,8 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
     public void AddToPocket(Costs earning)
     {
         matirial += earning.Matirial;
-        OnMatirialAmountChenged(matirial);
+        if(OnMatirialAmountChenged != null)    
+            OnMatirialAmountChenged(matirial);
     }
 
     public event Action<int> OnMatirialAmountChenged;

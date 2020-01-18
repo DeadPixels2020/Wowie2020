@@ -15,9 +15,7 @@ MonoBehaviour:
   name: 
   describtion: 
   costs:
-    mineral: 0
-    metal: 0
-    darkEnegry: 0
+    matirial: 0
   stats:
     hp: 0
     sheelds: 0
@@ -28,7 +26,7 @@ MonoBehaviour:
   florDetcting: 0
   buildLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}

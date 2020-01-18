@@ -7,7 +7,7 @@ public class Costs{
 
 
     public int Matirial{
-        get{ return matirial; }
+        get => matirial;
     }
 
 }
