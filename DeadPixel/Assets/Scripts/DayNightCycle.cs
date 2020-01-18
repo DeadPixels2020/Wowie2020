@@ -28,12 +28,12 @@ public class DayNightCycle : MonoBehaviour
         if(_light.intensity < 0.01f && isDay){
             isDay = false;
             chengIntensityTo = 1;
-            dayNightSeter.onGettingDark();
+            if(dayNightSeter != null) dayNightSeter.onGettingDark();
         }
         if(_light.intensity > 0.98f && !isDay){
             isDay = true;
             chengIntensityTo = 0;
-            dayNightSeter.onGettingBrighter();
+            if(dayNightSeter != null) dayNightSeter.onGettingBrighter();
         }
     }
 
