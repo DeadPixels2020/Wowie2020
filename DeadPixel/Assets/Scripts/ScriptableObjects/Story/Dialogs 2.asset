@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDialog: asdasdasdasd
   nextSentences: {fileID: 0}
-  EndScene: 0
+  EndScene: 1
