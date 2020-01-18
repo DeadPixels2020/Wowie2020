@@ -8,6 +8,7 @@ public class GameEvents : MonoBehaviour,IDayNightSeter
     public static GameEvents instance;
 
     private void Awake() {
+        
         if(instance == null){
             instance = this;
         }else if(instance != this){
