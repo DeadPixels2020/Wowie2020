@@ -9,6 +9,16 @@ public class BuilderContoller : MonoBehaviour,ICursoreControler
     [SerializeField] private Building building; // TEMP
     [SerializeField] private float rotationSensativity;
 
+    public Building Building
+    {
+        get => building;
+        set{
+            OnDeselected();
+            building = value;
+            OnSelected();
+        }
+    }
+
     private BuildingContainer buildingContainer;
 
     private void Awake() {
