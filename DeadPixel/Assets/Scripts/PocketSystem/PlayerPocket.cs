@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +7,9 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
 
     public static PlayerPocket Pocket;
 
-    private int mineral;
-    private int metal;
-    private int darkEnegry;
+    private int matirial;
+
+    public int Matirial{get;}
 
     private void Awake() {
         if(Pocket == null){
@@ -22,14 +22,13 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
 
     public bool AbleToPay(Costs costs)
     {
-        return mineral >= costs.Minerals && metal >= costs.Metals && darkEnegry >= costs.DarkEnergy;
+        return matirial >= costs.Matirial;
     }
 
     public void Pay(Costs costs)
     {
-        mineral -= costs.Minerals;
-        metal -= costs.Metals;
-        darkEnegry -= costs.DarkEnergy;
+        matirial -= costs.Matirial;
+        OnMatirialAmountChenged(matirial);
     }
 
     public bool TryToPay(Costs costs)
@@ -44,8 +43,9 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
 
     public void AddToPocket(Costs earning)
     {
-        mineral += earning.Minerals;
-        metal += earning.Metals;
-        darkEnegry += earning.DarkEnergy;
+        matirial += earning.Matirial;
+        OnMatirialAmountChenged(matirial);
     }
+
+    public event Action<int> OnMatirialAmountChenged;
 }
