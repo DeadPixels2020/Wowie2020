@@ -4,34 +4,24 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public float damage = 1;
+    [SerializeField] private int damageHp = 1;
+    [SerializeField] private int damageSheelds = 1;
 
+    private Damage damage;
+
+    private void Start() {
+        damage = new Damage(damageHp,damageSheelds,gameObject);
+    }
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        /*if (collider == GameObject.FindObjectOfType<BugInsect>().GetComponent<Collision2D>())
-        {
-            collider.gameObject.GetComponent<BugInsect>().MyHelth -= damage;
+        if(collider.gameObject.CompareTag("Enemy")){
+            IHealthDamager health = collider.gameObject.GetComponent<IHealthDamager>();
+            if(health != null){
+                health.TakeDamage(damage);
+                StopAllCoroutines();
+                Destroy(gameObject);
+            }
         }
-        else if(collider == GameObject.FindObjectOfType<BugInsect1>().GetComponent<Collision2D>())
-        {
-            collider.gameObject.GetComponent<BugInsect1>().MyHelth -= damage;
-        }
-        else if(collider == GameObject.FindObjectOfType<BugInsect2>().GetComponent<Collision2D>())
-        {
-            collider.gameObject.GetComponent<BugInsect2>().MyHelth -= damage;
-        }
-        else if(collider == GameObject.FindObjectOfType<BugInsect3>().GetComponent<Collision2D>())
-        {
-            collider.gameObject.GetComponent<BugInsect3>().MyHelth -= damage;
-        }
-        else if(collider == GameObject.FindObjectOfType<BugInsect4>().GetComponent<Collision2D>())
-        {
-            collider.gameObject.GetComponent<BugInsect4>().MyHelth -= damage;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }*/
     }
     private void Awake()
     {

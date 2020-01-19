@@ -56,7 +56,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,8 +113,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 1.8
+  m_fontSize: 1.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -270,8 +270,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -19334527
-  m_SortingLayer: 1
+  m_SortingLayerID: -1680261405
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f22da8b804b0a4fa3881df1a919162ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 7115717795522407891}
   - component: {fileID: 7115717795522407900}
   - component: {fileID: 7115717795522407884}
+  - component: {fileID: 108662258885653772}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -458,3 +459,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18ac45b1f1ba4c5e8047324248537b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyHelth: 0
+--- !u!114 &108662258885653772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115717795522407890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc21e28773f39945bd04ef283c66e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageHp: 1
+  damageSheelds: 0
+  attackRate: 0.5
