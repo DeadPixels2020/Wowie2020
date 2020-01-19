@@ -83,8 +83,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ca71e8e4a320744b3e1b28eda5d6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  au: {fileID: 0}
   timer: 0
-  chengScale: 0.1
+  chengScale: 1
   invert: 0
   SunriseIfNoEnemiesLeft: 1
   spawner: {fileID: 0}
