@@ -35,6 +35,7 @@ public class DayNightCycle : MonoBehaviour
         chengIntensityTo = 1;
         dayNightSeter = GameEvents.instance;
         currentNight = 0;
+        timer = 20;
     }
 
     private void Update()
