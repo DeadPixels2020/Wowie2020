@@ -19,6 +19,7 @@ public class TeruelTargetFinder : MonoBehaviour
     {
         Transform tg = shooting.GetTarget();
         if (tg == null || Vector2.Distance(transform.position, tg.position) > rangeRadius) searchForEnemies();
+        Debug.Log(tg == null ? "NULL" : tg.name);
     }
 
     private void searchForEnemies()
@@ -27,10 +28,11 @@ public class TeruelTargetFinder : MonoBehaviour
 
         Transform closest = null;
         float minDist = rangeRadius;
+        
 
         foreach(Collider2D collider in col){
 
-            IHitable hitable = collider.gameObject.GetComponent<IHitable>();
+            IHealthDamager hitable = collider.gameObject.GetComponent<IHealthDamager>();
             if(hitable != null)
             {
                 float dst = Vector2.Distance(collider.transform.position, transform.position);

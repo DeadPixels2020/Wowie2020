@@ -6,28 +6,12 @@ public class BugDamager : MonoBehaviour
 {
     [SerializeField] private int damageHp;
     [SerializeField] private int damageSheelds;
-    [SerializeField] private float attackRate;
     
 
     private Damage damage;
-    private float attackTimer;
-    private bool isReadyToAttak;
 
     private void Start() {
-        damage= new Damage(damageHp,damageSheelds,gameObject);
-    }
-
-    private void Update() {
-        if(!isReadyToAttak){
-
-            attackTimer += Time.deltaTime;
-
-            if(attackTimer >= attackRate){
-                isReadyToAttak = true;
-                attackTimer = 0;
-            }
-        }
-
+        damage = new Damage(damageHp,damageSheelds,gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -36,10 +20,9 @@ public class BugDamager : MonoBehaviour
         {
             IHealthDamager health = other.gameObject.GetComponent<IHealthDamager>();
 
-            if(isReadyToAttak && health != null)
+            if(health != null)
             {
-                health.TakeDamage(damage);
-                isReadyToAttak = false;
+                health.TakeDamage(damage);                
             }
         }
     }
