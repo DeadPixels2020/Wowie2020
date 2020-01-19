@@ -11,22 +11,20 @@ public class BugDamager : MonoBehaviour
     private Damage damage;
 
     private void Start() {
-        damage= new Damage(damageHp,damageSheelds,gameObject);
+        damage = new Damage(damageHp,damageSheelds,gameObject);
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.CompareTag("Player")){
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
             IHealthDamager health = other.gameObject.GetComponent<IHealthDamager>();
 
-            if(health != null){
-                health.TakeDamage(damage);
-                Suicide();
+            if(health != null)
+            {
+                health.TakeDamage(damage);                
             }
         }
-    }
-
-    private void Suicide(){
-        Destroy(gameObject);
     }
 
 }
