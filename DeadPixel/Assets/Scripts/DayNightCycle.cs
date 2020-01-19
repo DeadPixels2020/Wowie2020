@@ -7,6 +7,8 @@ using UnityEngine.Experimental.Rendering.LWRP;
 public class DayNightCycle : MonoBehaviour
 {
     public int currentNight;
+    public float timer;
+
     private Light2D _light;
     [SerializeField] private float chengScale;
     [SerializeField] private bool invert;
@@ -39,13 +41,18 @@ public class DayNightCycle : MonoBehaviour
             {
                 StartSunrise();
                 currentNight += 1;
+                timer = 15;
             }
 
         }
-
-        if(_light.intensity > 0.998f)
+        timer -= 1 * Time.deltaTime;
+        if (_light.intensity > 0.998f)
         {
-            StartSunset();
+            if (timer <= 0)
+            {
+                StartSunset();
+                spawner.StartSpawning();
+            }
         }
 
         isDay = _light.intensity > .5f;
