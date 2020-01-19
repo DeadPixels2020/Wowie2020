@@ -7,14 +7,12 @@ public class BugInsect : MonoBehaviour,IHitable
     public float MyHelth;
     float GiveDamadge;
     float speed;
-    PlayerPocket pocket;
     Player player;
 
     private void Awake()
     {
         MyHelth = 10;
         GiveDamadge = .5f;
-        pocket = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPocket>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
     private void Update()

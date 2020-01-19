@@ -12,11 +12,4 @@ public class Player : MonoBehaviour
     {
         PlayerHealth = 10;
     }
-    private void OnCollisionEnter2D(Collider2D collision)
-    {
-        if (collision == GameObject.FindGameObjectWithTag("Enemy").GetComponent<Collider2D>())
-        {
-            slider.value = PlayerHealth / 10;
-        }
-    }
 }
