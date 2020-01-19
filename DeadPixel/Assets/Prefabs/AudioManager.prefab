@@ -94,7 +94,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MusicDay
     clip: {fileID: 8300000, guid: 765f10572440043feb1392fde9e8b734, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MusicNight
     clip: {fileID: 8300000, guid: 8d06e04bc240243b2bfa279f7b7f762a, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}

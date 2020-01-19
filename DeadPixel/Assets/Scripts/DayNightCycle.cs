@@ -29,7 +29,7 @@ public class DayNightCycle : MonoBehaviour
     private void Awake()
     {
         _light = GetComponent<Light2D>();
-        chengIntensityTo = 0;
+        chengIntensityTo = 1;
         dayNightSeter = GameEvents.instance;
         currentNight = 0;
     }
