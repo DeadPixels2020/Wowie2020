@@ -5,15 +5,17 @@ public class Costs{
 
     [SerializeField] private int matirial;
 
-    public Costs(){
+    public Costs()
+    {
         matirial = 0;
     }
-    public Costs(int matirial){
+    public Costs(int matirial)
+    {
         this.matirial = matirial;
     }
 
-    public int Matirial{
+    public int Matirial
+    {
         get => matirial;
     }
-
 }

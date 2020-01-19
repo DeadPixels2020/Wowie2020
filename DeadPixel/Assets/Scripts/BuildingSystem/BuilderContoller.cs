@@ -4,25 +4,24 @@ using UnityEngine;
 
 public class BuilderContoller : MonoBehaviour,ICursoreControler
 {
+    public List<Building> buildingModel;
+
     [SerializeField] private CursorBuilder cursor;
     [SerializeField] private GameObject containerPrefab;
     [SerializeField] private Building building; // TEMP
     [SerializeField] private float rotationSensativity;
 
-    public Building Building
-    {
-        get => building;
-        set{
-            OnDeselected();
-            building = value;
-            OnSelected();
-        }
-    }
-
     private BuildingContainer buildingContainer;
 
-    private void Awake() {
+    private void Awake()
+    {
+        //cursor.cursoreControler = this;
+    }
+    public void Make(int Model)
+    {
+        building = buildingModel[Model];
         cursor.cursoreControler = this;
+        OnSelected();
     }
 
     private void OnSelected(){
@@ -53,12 +52,11 @@ public class BuilderContoller : MonoBehaviour,ICursoreControler
         buildingContainer.FinalBuild();
         building = null;
         cursor.Selected = null;
-
-        
     }
 
-    private void Start() {
-        OnSelected();
+    private void Start()
+    {
+        //OnSelected();
     }
 
     public void OnRightClick()

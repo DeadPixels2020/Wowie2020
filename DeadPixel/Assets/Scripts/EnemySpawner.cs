@@ -7,7 +7,12 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject target;
 
-    [SerializeField] private GameObject[] enemies;
+    //[SerializeField] private GameObject[] enemies;
+    [SerializeField] private GameObject enemie1;
+    [SerializeField] private GameObject enemie2;
+    [SerializeField] private GameObject enemie3;
+    [SerializeField] private GameObject enemie4;
+    [SerializeField] private GameObject enemie5;
 
     [SerializeField] private int enemiesToSpawn;
     [SerializeField] private bool useRandomIntervals;
@@ -23,8 +28,8 @@ public class EnemySpawner : MonoBehaviour
 
     public bool IsSpawning{get => isSpawning;}
 
-    private void spawn(){
-        
+    private void spawn()
+    {
         createEnemy();
         spawnedEnemies++;
         if(spawnedEnemies >= enemiesToSpawn){
@@ -38,12 +43,13 @@ public class EnemySpawner : MonoBehaviour
         }
     }    
 
-    private void createEnemy(){
-        int radnomIndex = Random.Range(0,enemies.Length);
+    private void createEnemy()
+    {
+        //int radnomIndex = Random.Range(0,enemies.Length);
 
         Vector2 randomPos = randomPosition();
 
-        GameObject enemy = Instantiate(enemies[radnomIndex],randomPos,Quaternion.identity) as GameObject;
+        GameObject enemy = Instantiate(enemie1,randomPos,Quaternion.identity) as GameObject;
         enemy.SetActive(true);//They all start non active becouse of the prototype
         enemy.transform.parent = transform;
     }

@@ -69,8 +69,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 83db42544b3ed472da5ea627f6eb2e6a, type: 3}
-  m_Color: {r: 0.2657438, g: 0.26032394, b: 0.4716981, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 18df2e2af08ef47c081cda134666ee66, type: 3}
+  m_Color: {r: 0.2657438, g: 0.26032394, b: 0.4716981, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -119,13 +119,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396623498800155326}
-  - component: {fileID: 7728773346717728843}
-  - component: {fileID: 7250983166251234766}
-  - component: {fileID: 1419984595286765305}
-  - component: {fileID: 3246905311147835591}
-  - component: {fileID: 5704209756999875703}
+  - component: {fileID: -3527457117664871881}
   m_Layer: 9
-  m_Name: Teruel 2
+  m_Name: Teruel 5prototype
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,23 +143,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &7728773346717728843
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396623498800155322}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.1
---- !u!114 &7250983166251234766
+--- !u!114 &-3527457117664871881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,60 +152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2396623498800155322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476977f947349410a8817cd58ddbbd5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletInst: {fileID: 7256619904810710559, guid: a2fc0659b17154b558ca4b678fbf2f40,
-    type: 3}
-  head: {fileID: 7231730814970075971}
-  firePoint: {fileID: 2396623498780631848}
-  fireRate: 0
---- !u!114 &1419984595286765305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396623498800155322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f17b1bdfcae9346789bc7dfb1ad7c59a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangeRadius: 7
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 2048
-  obsticleMasks:
-    serializedVersion: 2
-    m_Bits: 257
---- !u!114 &3246905311147835591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396623498800155322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4766dbe7861f64e63916a7c40304bdfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 2396623498229944680}
-  col: {fileID: 7728773346717728843}
-  headsSprite: {fileID: 3198992179242762095}
-  shooting: {fileID: 7250983166251234766}
-  finder: {fileID: 1419984595286765305}
---- !u!114 &5704209756999875703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396623498800155322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffeb63300488f43b292cd6cc865f4e7a, type: 3}
+  m_Script: {fileID: 11500000, guid: 221935b1cb218fe499b67789b8f906cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2607914093039851686
@@ -298,8 +225,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 73e1f0c8b4adf48399ceee52ddb9bde7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 4c660be605f4940648c6f59fe0afda48, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_FlipX: 1
   m_FlipY: 1
   m_DrawMode: 0

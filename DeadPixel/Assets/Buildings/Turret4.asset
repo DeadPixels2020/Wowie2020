@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb3feb7c0a7dd945ac4c810a6f1c9aa, type: 3}
+  m_Name: Turret4
+  m_EditorClassIdentifier: 
+  name: 5
+  describtion: 
+  costs:
+    matirial: 100
+  stats:
+    hp: 0
+    sheelds: 0
+  prototypeBuilding: {fileID: 2396623498800155322, guid: 87c7712acb79549febbf5fb01d99b532,
+    type: 3}
+  finishBuilding: {fileID: 2396623498800155322, guid: e00e22d5752e344488111c51fa327fd6,
+    type: 3}
+  florDetcting: 0
+  buildLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}

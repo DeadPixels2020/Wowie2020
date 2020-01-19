@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    int Material = 500;
 
     public UIPlaySceneManager UIPlay;
 
-    private BuildSystem buildSystem;
-    [SerializeField] private GameObject wall;
+    public PlayerPocket pocket;
+    public BuilderContoller builder;
+    /*[SerializeField] private GameObject wall;
     [SerializeField] private GameObject trap;
     [SerializeField] private GameObject turet1;
     [SerializeField] private GameObject turet2;
     [SerializeField] private GameObject turet3;
     [SerializeField] private GameObject turet4;
     [SerializeField] private GameObject turet5;
-    [SerializeField] private GameObject turet6;
+    [SerializeField] private GameObject turet6;*/
 
     public void GoToMainMenu()
 	{
@@ -26,10 +26,10 @@ public class GameManager : MonoBehaviour
 	}
     public void BuyTurret1()
     {
-        if (Material - 10 >= 0)
+        if (pocket.Matirial >= 10)
         {
-            Material -= 10;
-            buildSystem.Select(Instantiate(turet1));
+            //pocket.Pay();
+            builder.Make(0);
         }
         else
         {
@@ -38,10 +38,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret2()
     {
-        if (Material - 20 >= 0)
+        if (pocket.Matirial >= 20)
         {
-            Material -= 20;
-            buildSystem.Select(Instantiate(turet2));
+            //pocket.Pay();
+            builder.Make(1);
         }
         else
         {
@@ -50,10 +50,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret3()
     {
-        if (Material - 50 >= 0)
+        if (pocket.Matirial >= 40)
         {
-            Material -= 50;
-            buildSystem.Select(Instantiate(turet3));
+            //pocket.Pay();
+            builder.Make(2);
         }
         else
         {
@@ -62,10 +62,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret4()
     {
-        if (Material - 100 >= 0)
+        if (pocket.Matirial >= 60)
         {
-            Material -= 100;
-            buildSystem.Select(Instantiate(turet4));
+            //pocket.Pay();
+            builder.Make(3);
         }
         else
         {
@@ -74,10 +74,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret5()
     {
-        if (Material - 200 >= 0)
+        if (pocket.Matirial >= 100)
         {
-            Material -= 200;
-            buildSystem.Select(Instantiate(turet5));
+            //pocket.Pay();
+            builder.Make(4);
         }
         else
         {
@@ -86,10 +86,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret6()
     {
-        if (Material - 500 >= 0)
+        if (pocket.Matirial >= 150)
         {
-            Material -= 500;
-            buildSystem.Select(Instantiate(turet6));
+            //pocket.Pay();
+            builder.Make(5);
         }
         else
         {
@@ -98,10 +98,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTrap()
     {
-        if (Material - 50 >= 0)
+        if (pocket.Matirial >= 40)
         {
-            Material -= 50;
-            buildSystem.Select(Instantiate(trap));
+            //pocket.Pay();
+            builder.Make(6);
         }
         else
         {
@@ -110,11 +110,10 @@ public class GameManager : MonoBehaviour
     }
     public void BuyBarrier()
     {
-        if (Material - 10 >= 0)
+        if (pocket.Matirial >= 20)
         {
-            Material -= 10;
-            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            buildSystem.Select(Instantiate(wall, pos, Quaternion.identity));
+            //pocket.Pay();
+            builder.Make(7);
         }
         else
         {
