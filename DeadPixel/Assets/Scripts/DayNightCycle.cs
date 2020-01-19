@@ -6,10 +6,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 [RequireComponent(typeof(Light2D))]
 public class DayNightCycle : MonoBehaviour
 {
-    int currentNight;
-
-    GameObject[] Enemy;
-
+    public int currentNight;
     private Light2D _light;
     [SerializeField] private float chengScale;
     [SerializeField] private bool invert;
@@ -29,22 +26,19 @@ public class DayNightCycle : MonoBehaviour
         _light = GetComponent<Light2D>();
         chengIntensityTo = 0;
         dayNightSeter = GameEvents.instance;
+        currentNight = 0;
     }
 
     private void Update()
     {
         _light.intensity = Mathf.Lerp(_light.intensity,chengIntensityTo,Time.deltaTime * chengScale);
         
-        if(_light.intensity < 0.001f){
-            Enemy = GameObject.FindGameObjectsWithTag("Enemy");
-            if(Enemy.Length.Equals(0))
+        if(_light.intensity < 0.001f)
+        {
+            if (spawner.AreAllEnemiesDead())
             {
-                SunriseIfNoEnemiesLeft = true;
-            }
-            if(SunriseIfNoEnemiesLeft){
-                if(spawner.AreAllEnemiesDead()) StartSunrise();
-            }else{
                 StartSunrise();
+                currentNight += 1;
             }
 
         }
