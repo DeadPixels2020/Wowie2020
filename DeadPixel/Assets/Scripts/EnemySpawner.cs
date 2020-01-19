@@ -6,9 +6,9 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject target;
+
     public DayNightCycle cycle;
 
-    //[SerializeField] private GameObject[] enemies;
     [SerializeField] private GameObject enemie1;
     [SerializeField] private GameObject enemie2;
     [SerializeField] private GameObject enemie3;
@@ -50,29 +50,29 @@ public class EnemySpawner : MonoBehaviour
     {
         //int radnomIndex = Random.Range(0,enemies.Length);
         Vector2 randomPos = randomPosition();
-        if (cycle.currentNight == 0)
+        if (cycle.CurrentNight == 0)
         {
             enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
         }
-        if (cycle.currentNight == 1)
+        if (cycle.CurrentNight == 1)
         {
             enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
         }
-        if (cycle.currentNight == 2)
+        if (cycle.CurrentNight == 2)
         {
             enemy = Instantiate(enemie3, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
         }
-        if (cycle.currentNight == 3)
+        if (cycle.CurrentNight == 3)
         {
             enemy = Instantiate(enemie4, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
         }
-        if (cycle.currentNight == 4)
+        if (cycle.CurrentNight == 4)
         {
             enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
@@ -125,7 +125,7 @@ public class EnemySpawner : MonoBehaviour
     public bool AreAllEnemiesDead(){
         
         bool are = transform.childCount == 0;
-        if(are && OnAllEnemiesAreDead != null){
+        if( !isSpawning && are && OnAllEnemiesAreDead != null){
             OnAllEnemiesAreDead();
         }
 
