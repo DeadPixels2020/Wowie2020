@@ -19,6 +19,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject turet5;
     [SerializeField] private GameObject turet6;*/
 
+    private void Start() {
+        PlayerPocket.Pocket.AddToPocket(new Costs(999999));
+        PlayerPocket.Pocket.AddToPocket(new Costs(1));
+    }
+
     public void GoToMainMenu()
 	{
         Time.timeScale = 1;

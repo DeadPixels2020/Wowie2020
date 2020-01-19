@@ -32,10 +32,14 @@ public class DayNightCycle : MonoBehaviour
     private void Awake()
     {
         _light = GetComponent<Light2D>();
+    }
+
+    private void Start() {
         chengIntensityTo = 1;
         dayNightSeter = GameEvents.instance;
         currentNight = 0;
         timer = 20;
+        au.PlaySound("MusicDay");
     }
 
     private void Update()

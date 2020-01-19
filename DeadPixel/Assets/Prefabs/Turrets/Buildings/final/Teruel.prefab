@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17b1bdfcae9346789bc7dfb1ad7c59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeRadius: 7
+  rangeRadius: 20
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
