@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BugInsect : MonoBehaviour,IHitable
 {
-    float MyHelth;
+    public float MyHelth;
     float GiveDamadge;
     float speed;
-    GameManager gameManager;
     PlayerPocket pocket;
+    Player player;
 
     private void Awake()
     {
         MyHelth = 10;
         GiveDamadge = .5f;
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         pocket = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPocket>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
     private void Update()
     {
@@ -34,7 +34,7 @@ public class BugInsect : MonoBehaviour,IHitable
         }
         if (col.gameObject.tag == "Player")
         {
-            //gameManager.TakePlayerHelth();
+            player.PlayerHealth -= .5f;
             Destroy(gameObject);
         }
     }
