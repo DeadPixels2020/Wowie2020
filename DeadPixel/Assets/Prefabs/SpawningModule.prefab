@@ -44,12 +44,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  enemies:
-  - {fileID: 0}
-  enemiesToSpawn: 10
-  useRandomIntervals: 0
+  cycle: {fileID: 0}
+  enemie1: {fileID: 7115717795522407890, guid: 1ec2d621a036049ffbba5d6a0a51c50c, type: 3}
+  enemie2: {fileID: 2485295446192110467, guid: b9027fbc12eeb45c3b648271e9a93894, type: 3}
+  enemie3: {fileID: 7175012956810431619, guid: 33b8cbb885b704eda86f28cf8b55b35f, type: 3}
+  enemie4: {fileID: 244320741927734266, guid: bbb4040135b634df8b49fd24db071d86, type: 3}
+  enemie5: {fileID: 7397049200547252235, guid: 3cafbc863eae94e20bb99a0ec52b229a, type: 3}
+  enemiesToSpawn: 50
+  useRandomIntervals: 1
   interval: 1
   minInterval: 0
-  maxInterval: 0
+  maxInterval: 0.5
   minPoint: {fileID: 0}
   maxPoint: {fileID: 0}

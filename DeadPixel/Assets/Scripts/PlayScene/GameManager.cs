@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public UIPlaySceneManager UIPlay;
 
-    public PlayerPocket pocket;
+
     public BuilderContoller builder;
     /*[SerializeField] private GameObject wall;
     [SerializeField] private GameObject trap;
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 	}
     public void BuyTurret1()
     {
-        if (pocket.Matirial >= 10)
+        if (PlayerPocket.Pocket.Matirial >= 10)
         {
             builder.Make(0);
         }
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret2()
     {
-        if (pocket.Matirial >= 20)
+        if (PlayerPocket.Pocket.Matirial >= 20)
         {
             builder.Make(1);
         }
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret3()
     {
-        if (pocket.Matirial >= 40)
+        if (PlayerPocket.Pocket.Matirial >= 40)
         {
             builder.Make(2);
         }
@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret4()
     {
-        if (pocket.Matirial >= 60)
+        if (PlayerPocket.Pocket.Matirial >= 60)
         {
             builder.Make(3);
         }
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret5()
     {
-        if (pocket.Matirial >= 100)
+        if (PlayerPocket.Pocket.Matirial >= 100)
         {
             builder.Make(4);
         }
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTurret6()
     {
-        if (pocket.Matirial >= 150)
+        if (PlayerPocket.Pocket.Matirial >= 150)
         {
             builder.Make(5);
         }
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyTrap()
     {
-        if (pocket.Matirial >= 40)
+        if (PlayerPocket.Pocket.Matirial >= 40)
         {
             builder.Make(6);
         }
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
     }
     public void BuyBarrier()
     {
-        if (pocket.Matirial >= 20)
+        if (PlayerPocket.Pocket.Matirial >= 20)
         {
             builder.Make(7);
         }
