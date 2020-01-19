@@ -25,6 +25,9 @@ public class DayNightCycle : MonoBehaviour
     private IDayNightSeter dayNightSeter;
 
     public bool IsDay { get => isDay;}
+    private bool pause;
+
+    public bool IsPaused{get => pause;}
 
     private void Awake()
     {
@@ -36,33 +39,36 @@ public class DayNightCycle : MonoBehaviour
 
     private void Update()
     {
-        _light.intensity = Mathf.Lerp(_light.intensity,chengIntensityTo,Time.deltaTime * chengScale);
-        
-        if(_light.intensity < 0.001f)
-        {
-            if (spawner.AreAllEnemiesDead())
-            {
-                au.PlaySound("MusicDay");
-                au.StopSound("MusicNight");
-                StartSunrise();
-                currentNight += 1;
-                timer = 15;
-            }
+        if(!pause){
 
-        }
-        timer -= 1 * Time.deltaTime;
-        if (_light.intensity > 0.998f)
-        {
-            if (timer <= 0)
+            _light.intensity = Mathf.Lerp(_light.intensity,chengIntensityTo,Time.deltaTime * chengScale);
+            
+            if(_light.intensity < 0.001f)
             {
-                au.PlaySound("MusicNight");
-                au.StopSound("MusicDay");
-                StartSunset();
-                spawner.StartSpawning();
+                if (spawner.AreAllEnemiesDead())
+                {
+                    au.PlaySound("MusicDay");
+                    au.StopSound("MusicNight");
+                    StartSunrise();
+                    currentNight += 1;
+                    timer = 15;
+                }
+
             }
-        }
+            timer -= 1 * Time.deltaTime;
+            if (_light.intensity > 0.998f)
+            {
+                if (timer <= 0)
+                {
+                    au.PlaySound("MusicNight");
+                    au.StopSound("MusicDay");
+                    StartSunset();
+                    spawner.StartSpawning();
+                }
+            }
 
         isDay = _light.intensity > .5f;
+        }
     }
 
     private void StartSunrise(){
@@ -75,4 +81,22 @@ public class DayNightCycle : MonoBehaviour
         if(dayNightSeter != null) dayNightSeter.onGettingDark();
     }
 
+    public void PauseEffect(){
+        pause = true;
+    }
+
+    public void ResumeEffect(){
+        pause = false;
+    }
+
+    public void goToMidDay(){
+        _light.intensity = 1;
+        isDay = true;
+        chengIntensityTo = 0;
+    }
+    public void goToMidNight(){
+        _light.intensity = 0;
+        isDay = false;
+        chengIntensityTo = 1;
+    }
 }
