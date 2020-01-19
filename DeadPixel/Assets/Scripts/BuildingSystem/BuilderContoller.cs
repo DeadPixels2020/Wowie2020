@@ -52,6 +52,7 @@ public class BuilderContoller : MonoBehaviour,ICursoreControler
         buildingContainer.FinalBuild();
         building = null;
         cursor.Selected = null;
+
     }
 
     private void Start()

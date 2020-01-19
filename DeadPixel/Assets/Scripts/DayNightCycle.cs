@@ -8,8 +8,6 @@ public class DayNightCycle : MonoBehaviour
 {
     int currentNight;
 
-    GameObject[] Enemy;
-
     private Light2D _light;
     [SerializeField] private float chengScale;
     [SerializeField] private bool invert;
@@ -36,11 +34,6 @@ public class DayNightCycle : MonoBehaviour
         _light.intensity = Mathf.Lerp(_light.intensity,chengIntensityTo,Time.deltaTime * chengScale);
         
         if(_light.intensity < 0.001f){
-            Enemy = GameObject.FindGameObjectsWithTag("Enemy");
-            if(Enemy.Length.Equals(0))
-            {
-                SunriseIfNoEnemiesLeft = true;
-            }
             if(SunriseIfNoEnemiesLeft){
                 if(spawner.AreAllEnemiesDead()) StartSunrise();
             }else{

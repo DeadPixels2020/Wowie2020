@@ -6,8 +6,8 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject target;
-
-    //[SerializeField] private GameObject[] enemies;
+    
+   // [SerializeField] private GameObject[] enemies;
     [SerializeField] private GameObject enemie1;
     [SerializeField] private GameObject enemie2;
     [SerializeField] private GameObject enemie3;
@@ -95,7 +95,7 @@ public class EnemySpawner : MonoBehaviour
     public bool AreAllEnemiesDead(){
         
         bool are = transform.childCount == 0;
-        if(are && OnAllEnemiesAreDead != null){
+        if( !isSpawning && are && OnAllEnemiesAreDead != null){
             OnAllEnemiesAreDead();
         }
 
