@@ -6,13 +6,16 @@ using Random = UnityEngine.Random;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject target;
-    
-   // [SerializeField] private GameObject[] enemies;
+
+    public DayNightCycle cycle;
+
     [SerializeField] private GameObject enemie1;
     [SerializeField] private GameObject enemie2;
     [SerializeField] private GameObject enemie3;
     [SerializeField] private GameObject enemie4;
     [SerializeField] private GameObject enemie5;
+
+    GameObject enemy;
 
     [SerializeField] private int enemiesToSpawn;
     [SerializeField] private bool useRandomIntervals;
@@ -46,10 +49,37 @@ public class EnemySpawner : MonoBehaviour
     private void createEnemy()
     {
         //int radnomIndex = Random.Range(0,enemies.Length);
-
         Vector2 randomPos = randomPosition();
-
-        GameObject enemy = Instantiate(enemie1,randomPos,Quaternion.identity) as GameObject;
+        if (cycle.CurrentNight == 0)
+        {
+            enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
+        }
+        if (cycle.CurrentNight == 1)
+        {
+            enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
+        }
+        if (cycle.CurrentNight == 2)
+        {
+            enemy = Instantiate(enemie3, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
+        }
+        if (cycle.CurrentNight == 3)
+        {
+            enemy = Instantiate(enemie4, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
+        }
+        if (cycle.CurrentNight == 4)
+        {
+            enemy = Instantiate(enemie1, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie2, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie3, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie4, randomPos, Quaternion.identity) as GameObject;
+            enemy = Instantiate(enemie5, randomPos, Quaternion.identity) as GameObject;
+        }
         enemy.SetActive(true);//They all start non active becouse of the prototype
         enemy.transform.parent = transform;
     }
