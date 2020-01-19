@@ -8,7 +8,7 @@ public class BulletScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider == GameObject.FindObjectOfType<BugInsect>().GetComponent<Collision2D>())
+        /*if (collider == GameObject.FindObjectOfType<BugInsect>().GetComponent<Collision2D>())
         {
             collider.gameObject.GetComponent<BugInsect>().MyHelth -= damage;
         }
@@ -31,7 +31,7 @@ public class BulletScript : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
+        }*/
     }
     private void Awake()
     {

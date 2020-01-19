@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BugInsect1 : MonoBehaviour,IHitable
 {
-    float MyHelth;
+    public float MyHelth;
     GameManager gameManager;
     GameObject GaMan;
 

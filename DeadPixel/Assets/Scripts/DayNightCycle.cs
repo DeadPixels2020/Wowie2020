@@ -6,7 +6,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 [RequireComponent(typeof(Light2D))]
 public class DayNightCycle : MonoBehaviour
 {
-    public int currentNight;
+    public int CurrentNight;
     public float timer;
 
     private Light2D _light;
@@ -28,7 +28,7 @@ public class DayNightCycle : MonoBehaviour
         _light = GetComponent<Light2D>();
         chengIntensityTo = 0;
         dayNightSeter = GameEvents.instance;
-        currentNight = 0;
+        CurrentNight = 0;
     }
 
     private void Update()
@@ -40,7 +40,7 @@ public class DayNightCycle : MonoBehaviour
             if (spawner.AreAllEnemiesDead())
             {
                 StartSunrise();
-                currentNight += 1;
+                CurrentNight += 1;
                 timer = 15;
             }
 

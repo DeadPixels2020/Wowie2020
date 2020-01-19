@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 10)
         {
-            //pocket.Pay();
             builder.Make(0);
         }
         else
@@ -40,7 +39,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 20)
         {
-            //pocket.Pay();
             builder.Make(1);
         }
         else
@@ -52,7 +50,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 40)
         {
-            //pocket.Pay();
             builder.Make(2);
         }
         else
@@ -64,7 +61,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 60)
         {
-            //pocket.Pay();
             builder.Make(3);
         }
         else
@@ -76,7 +72,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 100)
         {
-            //pocket.Pay();
             builder.Make(4);
         }
         else
@@ -88,7 +83,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 150)
         {
-            //pocket.Pay();
             builder.Make(5);
         }
         else
@@ -100,7 +94,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 40)
         {
-            //pocket.Pay();
             builder.Make(6);
         }
         else
@@ -112,7 +105,6 @@ public class GameManager : MonoBehaviour
     {
         if (pocket.Matirial >= 20)
         {
-            //pocket.Pay();
             builder.Make(7);
         }
         else
