@@ -6,6 +6,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 [RequireComponent(typeof(Light2D))]
 public class DayNightCycle : MonoBehaviour
 {
+    public AudioManager au;
 
     int currentNight;
     public int CurrentNight{get => currentNight;}
@@ -41,6 +42,8 @@ public class DayNightCycle : MonoBehaviour
         {
             if (spawner.AreAllEnemiesDead())
             {
+                au.PlaySound("MusicDay");
+                au.StopSound("MusicNight");
                 StartSunrise();
                 currentNight += 1;
                 timer = 15;
@@ -52,6 +55,8 @@ public class DayNightCycle : MonoBehaviour
         {
             if (timer <= 0)
             {
+                au.PlaySound("MusicNight");
+                au.StopSound("MusicDay");
                 StartSunset();
                 spawner.StartSpawning();
             }
