@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2396623498229944681}
   - component: {fileID: 2396623498229944680}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396623498780631848}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,12 +119,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396623498800155326}
-  - component: {fileID: 7728773346717728843}
   - component: {fileID: 7250983166251234766}
   - component: {fileID: 1419984595286765305}
   - component: {fileID: 3246905311147835591}
   - component: {fileID: -5400310453371829670}
-  m_Layer: 0
+  - component: {fileID: 3102580860084520911}
+  m_Layer: 12
   m_Name: Teruel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,22 +148,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &7728773346717728843
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2396623498800155322}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.1
 --- !u!114 &7250983166251234766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 2396623498229944680}
-  col: {fileID: 7728773346717728843}
+  col: {fileID: 0}
   headsSprite: {fileID: 3198992179242762095}
   shooting: {fileID: 7250983166251234766}
   finder: {fileID: 1419984595286765305}
@@ -232,6 +216,34 @@ MonoBehaviour:
   stats:
     hp: 10
     sheelds: 0
+--- !u!60 &3102580860084520911
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396623498800155322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 1}
+      - {x: -0.9399696, y: -0.9435404}
+      - {x: 0.963718, y: -0.93952644}
 --- !u!1 &2607914093039851686
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7231730814970075971}
   - component: {fileID: 3198992179242762095}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TurelHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +400,7 @@ PrefabInstance:
     - target: {fileID: 4809210041630000511, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5983634495620835728, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
@@ -398,7 +410,7 @@ PrefabInstance:
     - target: {fileID: 5983634495620835741, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7954530417057485563, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
@@ -408,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 7954530417057485563, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82183cfade789b242a705904bff1a0a3, type: 3}
