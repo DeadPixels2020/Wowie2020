@@ -95,7 +95,8 @@ public class BuilderContoller : MonoBehaviour,ICursoreControler
             case Building.FlorDetctingMode.UseFinalObjectColider:
 
             Collider2D collider = building.FinishBuilding.GetComponent<Collider2D>();
-            hit = Physics2D.OverlapArea(collider.bounds.min,collider.bounds.max,building.BuildMask);
+            hit = Physics2D.OverlapArea(buildingContainer.transform.position + collider.bounds.min, buildingContainer.transform.position + collider.bounds.max,building.BuildMask);
+            Debug.Log( "min : "+collider.bounds.min);
 
             break;
             case Building.FlorDetctingMode.UseCustomBounds:

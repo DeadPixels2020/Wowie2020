@@ -22,9 +22,14 @@ public class BugDamager : MonoBehaviour
 
             if(health != null)
             {
-                health.TakeDamage(damage);                
+                health.TakeDamage(damage);     
+                Suicide();           
             }
         }
+    }
+
+    private void Suicide(){
+        Destroy(gameObject);
     }
 
 }

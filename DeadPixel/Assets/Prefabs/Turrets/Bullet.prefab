@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5183539067414436834}
   - component: {fileID: 8973948537418884710}
   - component: {fileID: 1979037541209582333}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0076e574b4bc6400f84304a8b1be18f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damageHp: 1
+  damageSheelds: 1
 --- !u!1 &7256619904903617083
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7256619904903617082}
   - component: {fileID: 7256619904903617029}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
