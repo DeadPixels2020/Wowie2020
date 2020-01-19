@@ -37,4 +37,21 @@ public class AudioManager : MonoBehaviour
             return;
         }
     }
+    public void SetAllsound(bool a)
+    {
+        if (a)
+        {
+            foreach (Sound s in sounds)
+            {
+                s.source.pitch = 1;
+            }
+        }
+        else if(!a)
+        {
+            foreach (Sound s in sounds)
+            {
+                s.source.pitch = 0;
+            }
+        }
+    }
 }

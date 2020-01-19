@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    public AudioManager audio;
+    public GameObject AuOn;
+    public GameObject AuOff;
     public UIPlaySceneManager UIPlay;
 
 
@@ -19,11 +21,47 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject turet5;
     [SerializeField] private GameObject turet6;*/
 
-    private void Start() {
-        PlayerPocket.Pocket.AddToPocket(new Costs(999999));
-        PlayerPocket.Pocket.AddToPocket(new Costs(1));
+    public void StopAllSound()
+    {
+        PlayerPrefs.SetInt("au", 0);
+        audio.SetAllsound(false);
+        AuOn.SetActive(false);
+        AuOff.SetActive(true);
+    }
+    public void MakeAllSound()
+    {
+        PlayerPrefs.SetInt("au", 1);
+        audio.SetAllsound(true);
+        AuOn.SetActive(true);
+        AuOff.SetActive(false);
+    }
+    private void Awake()
+    {
+        if(!PlayerPrefs.HasKey("au"))
+        {
+            PlayerPrefs.SetInt("au", 1);
+            AuOff.SetActive(false);
+            AuOn.SetActive(true);
+        }
+
+        if(PlayerPrefs.GetInt("au") == 0)
+        {
+            audio.SetAllsound(false);
+            AuOn.SetActive(false);
+            AuOff.SetActive(true);
+        }
+        if (PlayerPrefs.GetInt("au") == 1)
+        {
+            audio.SetAllsound(true);
+            AuOn.SetActive(true);
+            AuOff.SetActive(false);
+        }
     }
 
+    public void GoToBugScene()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 2);
+    }
     public void GoToMainMenu()
 	{
         Time.timeScale = 1;

@@ -40,6 +40,7 @@ public class BugDamager : MonoBehaviour
             {
                 health.TakeDamage(damage);
                 isReadyToAttak = false;
+                PlayerPocket.Pocket.AddToPocket(new Costs(2000));
             }
         }
     }

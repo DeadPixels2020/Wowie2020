@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
+
+    public GameObject error;
+
     [SerializeField] private GameObject target;
 
     public DayNightCycle cycle;
@@ -44,7 +48,11 @@ public class EnemySpawner : MonoBehaviour
             Invoke("spawn",interval);
 
         }
-    }    
+    }
+    private void Awake()
+    {
+        error.SetActive(false);
+    }
 
     private void createEnemy()
     {
@@ -79,6 +87,12 @@ public class EnemySpawner : MonoBehaviour
             enemy = Instantiate(enemie3, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie4, randomPos, Quaternion.identity) as GameObject;
             enemy = Instantiate(enemie5, randomPos, Quaternion.identity) as GameObject;
+        }
+        if (cycle.CurrentNight == 5)
+        {
+            Time.timeScale = 0;
+            error.SetActive(true);
+
         }
         enemy.SetActive(true);//They all start non active becouse of the prototype
         enemy.transform.parent = transform;
@@ -133,10 +147,18 @@ public class EnemySpawner : MonoBehaviour
 
     }
 
-  
+    private void Start() {
+        StartSpawning();
+    }
 
     public event Action OnStartSpawning;
     public event Action OnFinishSpawning;
     public event Action OnAllEnemiesAreDead;
+
+    IEnumerator BugStart()
+    {
+        yield return new WaitForSeconds(5);
+
+    }
 
 }
