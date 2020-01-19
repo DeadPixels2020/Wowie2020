@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthHandler : MonoBehaviour,IHealthDamager,IHealthHealer
 {
     [SerializeField] private Stats stats;
-
+    public Stats maxStats{get => stats;}
     private int hp;
     private int sheelds;
 
