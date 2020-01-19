@@ -7,7 +7,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 public class DayNightCycle : MonoBehaviour
 {
     int currentNight;
-    public int CurrentNight{get => currentNight;};
+    public int CurrentNight{get => currentNight;}
 
     private Light2D _light;
     [SerializeField] private float chengScale;
