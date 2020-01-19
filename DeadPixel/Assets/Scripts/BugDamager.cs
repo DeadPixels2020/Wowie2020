@@ -6,11 +6,9 @@ public class BugDamager : MonoBehaviour
 {
     [SerializeField] private int damageHp;
     [SerializeField] private int damageSheelds;
-    [SerializeField] private float attackRate;
     
 
     private Damage damage;
-    private float attackTimer;
 
     private void Start() {
         damage= new Damage(damageHp,damageSheelds,gameObject);

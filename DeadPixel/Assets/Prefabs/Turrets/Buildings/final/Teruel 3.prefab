@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7250983166251234766}
   - component: {fileID: 1419984595286765305}
   - component: {fileID: 3246905311147835591}
-  - component: {fileID: 5704209756999875703}
+  - component: {fileID: 4595410388273596504}
   m_Layer: 9
   m_Name: Teruel 3
   m_TagString: Untagged
@@ -199,7 +199,7 @@ MonoBehaviour:
     m_Bits: 2048
   obsticleMasks:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 512
 --- !u!114 &3246905311147835591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   headsSprite: {fileID: 3198992179242762095}
   shooting: {fileID: 7250983166251234766}
   finder: {fileID: 1419984595286765305}
---- !u!114 &5704209756999875703
+--- !u!114 &4595410388273596504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,9 +226,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2396623498800155322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffeb63300488f43b292cd6cc865f4e7a, type: 3}
+  m_Script: {fileID: 11500000, guid: c465fe12dc1fce041b49dbb6ad38a1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    hp: 10
+    sheelds: 0
 --- !u!1 &2607914093039851686
 GameObject:
   m_ObjectHideFlags: 0
