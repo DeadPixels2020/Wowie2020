@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public GameManager manager;
 
     public GameObject error;
 
@@ -92,7 +93,7 @@ public class EnemySpawner : MonoBehaviour
         {
             Time.timeScale = 0;
             error.SetActive(true);
-
+            StartCoroutine(BugStart());
         }
         enemy.SetActive(true);//They all start non active becouse of the prototype
         enemy.transform.parent = transform;
@@ -158,7 +159,7 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator BugStart()
     {
         yield return new WaitForSeconds(5);
-
+        manager.GoToBugScene();
     }
 
 }
