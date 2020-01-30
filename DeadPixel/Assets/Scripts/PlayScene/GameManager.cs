@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     }
     private void Awake()
     {
+        audio.Init();
+
         if(!PlayerPrefs.HasKey("au"))
         {
             PlayerPrefs.SetInt("au", 1);

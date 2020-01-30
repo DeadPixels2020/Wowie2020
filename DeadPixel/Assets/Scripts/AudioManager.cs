@@ -6,8 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
-    private void Awake()
-    {
+    public void Init(){
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -17,6 +16,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
+
     public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -43,6 +43,12 @@ public class AudioManager : MonoBehaviour
         {
             foreach (Sound s in sounds)
             {
+                if(s.source == null){
+                    Debug.Log("Null");
+                    continue;
+                }
+                    
+
                 s.source.pitch = 1;
             }
         }
@@ -50,6 +56,11 @@ public class AudioManager : MonoBehaviour
         {
             foreach (Sound s in sounds)
             {
+                if(s.source == null){
+                    Debug.Log("Null");
+                    continue;
+                }
+
                 s.source.pitch = 0;
             }
         }
