@@ -6,6 +6,13 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    private bool isInited;
+
+    private void Awake()
+    {
+        if (!isInited) Init();
+    }
+
     public void Init(){
         foreach (Sound s in sounds)
         {
@@ -15,6 +22,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+
+        isInited = true;
     }
 
     public void PlaySound(string name)
