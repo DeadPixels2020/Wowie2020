@@ -180,7 +180,7 @@ MonoBehaviour:
     type: 3}
   head: {fileID: 7231730814970075971}
   firePoint: {fileID: 2396623498780631848}
-  fireRate: 0
+  fireRate: 1
 --- !u!114 &1419984595286765305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    hp: 10
+    hp: 20
     sheelds: 0
 --- !u!1 &2607914093039851686
 GameObject:

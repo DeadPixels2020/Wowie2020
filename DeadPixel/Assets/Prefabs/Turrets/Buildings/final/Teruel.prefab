@@ -164,7 +164,7 @@ MonoBehaviour:
     type: 3}
   head: {fileID: 7231730814970075971}
   firePoint: {fileID: 2396623498780631848}
-  fireRate: 0.2
+  fireRate: 1
 --- !u!114 &1419984595286765305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f17b1bdfcae9346789bc7dfb1ad7c59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeRadius: 20
+  rangeRadius: 7
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048

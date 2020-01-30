@@ -35,7 +35,8 @@ public class HealthHandler : MonoBehaviour,IHealthDamager,IHealthHealer
 
         if(OnStatsChenged != null) OnStatsChenged(new Stats(hp,sheelds));
 
-        if(hp < 0 && OnHealthBelowZero != null)
+        if (hp < 0 && OnHealthBelowZero != null)
+            Destroy(gameObject);
             OnHealthBelowZero();
     }
 
