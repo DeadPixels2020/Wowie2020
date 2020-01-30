@@ -10,9 +10,11 @@ public class BulletScript : MonoBehaviour
     private Damage damage;
 
     AudioManager Audio;
+    PlayerPocket pocket;
 
     private void Start() {
         damage = new Damage(damageHp,damageSheelds,gameObject);
+        pocket = FindObjectOfType<PlayerPocket>();
         Audio = FindObjectOfType<AudioManager>();
         Audio.PlaySound("TurretShot1");
     }
@@ -23,7 +25,7 @@ public class BulletScript : MonoBehaviour
             if(health != null){
                 health.TakeDamage(damage);
                 StopAllCoroutines();
-
+                pocket.AddToPocket(new Costs(2));
             }
         }
         Destroy(gameObject);

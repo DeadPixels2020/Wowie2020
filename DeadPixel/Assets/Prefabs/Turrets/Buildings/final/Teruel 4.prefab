@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    hp: 10
+    hp: 50
     sheelds: 0
 --- !u!1 &2607914093039851686
 GameObject:

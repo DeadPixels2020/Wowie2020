@@ -164,7 +164,7 @@ MonoBehaviour:
     type: 3}
   head: {fileID: 7231730814970075971}
   firePoint: {fileID: 2396623498780631848}
-  fireRate: 0.2
+  fireRate: 0.25
 --- !u!114 &1419984595286765305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    hp: 10
+    hp: 30
     sheelds: 0
 --- !u!61 &7799800538409951070
 BoxCollider2D:

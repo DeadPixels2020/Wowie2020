@@ -42,10 +42,10 @@ public class BugDamager : MonoBehaviour
             {
                 health.TakeDamage(damage);
                 isReadyToAttak = false;
-                PlayerPocket.Pocket.AddToPocket(new Costs(2000));
-                Destroy(gameObject);
-
+                PlayerPocket.Pocket.AddToPocket(new Costs(2));
+                
                 Audio.PlaySound("PlayerTakesDmg");
+                Destroy(gameObject);
             }
         }
     }

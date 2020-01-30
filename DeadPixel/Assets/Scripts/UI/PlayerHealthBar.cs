@@ -17,6 +17,7 @@ public class PlayerHealthBar : MonoBehaviour, IHealthDamager, IHealthHealer
     {
         hp = stats.HP;
         sheelds = stats.Sheelds;
+        HealthSlider.value = hp;
     }
 
     public void Heal(HealAmount heal)
@@ -41,7 +42,7 @@ public class PlayerHealthBar : MonoBehaviour, IHealthDamager, IHealthHealer
 
         if (hp < 0 && OnHealthBelowZero != null)
             OnHealthBelowZero();
-        //HealthSlider.value = 
+        HealthSlider.value = hp;
         if (hp <= 0)
         {
             UI.OpenDeth();
