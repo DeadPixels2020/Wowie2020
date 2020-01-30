@@ -7,7 +7,8 @@ public class BugDamager : MonoBehaviour
     [SerializeField] private int damageHp;
     [SerializeField] private int damageSheelds;
     [SerializeField] private float attackRate;
-    
+
+    AudioManager Audio;
 
     private Damage damage;
     private float attackTimer;
@@ -15,6 +16,7 @@ public class BugDamager : MonoBehaviour
 
     private void Start() {
         damage= new Damage(damageHp,damageSheelds,gameObject);
+        Audio = FindObjectOfType<AudioManager>();
     }
 
     private void Update() {
@@ -41,6 +43,9 @@ public class BugDamager : MonoBehaviour
                 health.TakeDamage(damage);
                 isReadyToAttak = false;
                 PlayerPocket.Pocket.AddToPocket(new Costs(2000));
+                Destroy(gameObject);
+
+                Audio.PlaySound("PlayerTakesDmg");
             }
         }
     }

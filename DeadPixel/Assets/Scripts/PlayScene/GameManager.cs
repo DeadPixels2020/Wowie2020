@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: 2);
     }
+    public void restart()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 1);
+        Time.timeScale = 1;
+    }
     public void GoToMainMenu()
 	{
         Time.timeScale = 1;

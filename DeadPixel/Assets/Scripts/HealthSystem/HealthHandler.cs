@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthHandler : MonoBehaviour,IHealthDamager,IHealthHealer
 {
@@ -35,7 +36,7 @@ public class HealthHandler : MonoBehaviour,IHealthDamager,IHealthHealer
         if(OnStatsChenged != null) OnStatsChenged(new Stats(hp,sheelds));
 
         if(hp < 0 && OnHealthBelowZero != null)
-            OnHealthBelowZero(); 
+            OnHealthBelowZero();
     }
 
     public event Action<Stats> OnStatsChenged;

@@ -149,7 +149,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void Start() {
-        StartSpawning();
+        //StartSpawning();
     }
 
     public event Action OnStartSpawning;

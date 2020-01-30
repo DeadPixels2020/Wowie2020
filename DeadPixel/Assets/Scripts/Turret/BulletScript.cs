@@ -9,8 +9,12 @@ public class BulletScript : MonoBehaviour
 
     private Damage damage;
 
+    AudioManager Audio;
+
     private void Start() {
         damage = new Damage(damageHp,damageSheelds,gameObject);
+        Audio = FindObjectOfType<AudioManager>();
+        Audio.PlaySound("TurretShot1");
     }
     private void OnCollisionEnter2D(Collision2D collider)
     {
@@ -19,9 +23,10 @@ public class BulletScript : MonoBehaviour
             if(health != null){
                 health.TakeDamage(damage);
                 StopAllCoroutines();
-                Destroy(gameObject);
+
             }
         }
+        Destroy(gameObject);
     }
     private void Awake()
     {

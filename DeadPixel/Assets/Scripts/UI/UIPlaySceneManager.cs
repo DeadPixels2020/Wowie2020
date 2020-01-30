@@ -7,7 +7,12 @@ public class UIPlaySceneManager : MonoBehaviour
     public AudioManager au;
 
     public Animator PLaySceneAnime;
+    public GameObject DethUI;
 
+    private void Awake()
+    {
+        DethUI.SetActive(false);
+    }
     public void OpenWeapons()
     {
         PLaySceneAnime.SetInteger("Panels", 1);
@@ -41,6 +46,12 @@ public class UIPlaySceneManager : MonoBehaviour
         PLaySceneAnime.SetInteger("Panels", 6);
         au.PlaySound("MenuClick");
         Time.timeScale = 1;
+    }
+    public void OpenDeth()
+    {
+        DethUI.SetActive(true);
+        PLaySceneAnime.SetInteger("Panels", 7);
+        au.PlaySound("MenuClick");
     }
     IEnumerator waiting()
     {
