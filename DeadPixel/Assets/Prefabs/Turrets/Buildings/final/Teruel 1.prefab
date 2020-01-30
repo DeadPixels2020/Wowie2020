@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2396623498229944681}
   - component: {fileID: 2396623498229944680}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396623498780631848}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 1419984595286765305}
   - component: {fileID: 3246905311147835591}
   - component: {fileID: -8801309443342222551}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Teruel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476977f947349410a8817cd58ddbbd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletInst: {fileID: 7256619904810710559, guid: a2fc0659b17154b558ca4b678fbf2f40,
+  bulletInst: {fileID: 7256619904810710559, guid: 03646bcd8ed05455a8aaed33c8302545,
     type: 3}
   head: {fileID: 7231730814970075971}
   firePoint: {fileID: 2396623498780631848}
@@ -242,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7231730814970075971}
   - component: {fileID: 3198992179242762095}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: TurelHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,10 +385,20 @@ PrefabInstance:
       propertyPath: position.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4326354196154684121, guid: 82183cfade789b242a705904bff1a0a3,
+        type: 3}
+      propertyPath: TransformIsDirty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326354196154684121, guid: 82183cfade789b242a705904bff1a0a3,
+        type: 3}
+      propertyPath: ContactFilter.layerMask.m_Bits
+      value: 5943
+      objectReference: {fileID: 0}
     - target: {fileID: 4809210041630000511, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5983634495620835728, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
@@ -398,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 5983634495620835741, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7954530417057485563, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
@@ -408,7 +418,7 @@ PrefabInstance:
     - target: {fileID: 7954530417057485563, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82183cfade789b242a705904bff1a0a3, type: 3}

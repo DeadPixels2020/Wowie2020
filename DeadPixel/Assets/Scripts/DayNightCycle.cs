@@ -56,6 +56,7 @@ public class DayNightCycle : MonoBehaviour
                     au.StopSound("MusicNight");
                     StartSunrise();
                     currentNight += 1;
+                    spawner.enemiesToSpawn += 5;
                     timer = 15;
                 }
 

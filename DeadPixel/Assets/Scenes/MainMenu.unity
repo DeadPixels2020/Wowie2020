@@ -17496,7 +17496,7 @@ GameObject:
   - component: {fileID: 2049266399}
   - component: {fileID: 2049266398}
   m_Layer: 5
-  m_Name: Video Player
+  m_Name: Backround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,7 +7,7 @@ public class PlayerPocket : MonoBehaviour,IPaymentController,IEarningsController
 
     public static PlayerPocket Pocket;
 
-    private int matirial = 100;
+    private int matirial = 40;
 
     public int Matirial{get => matirial;}
 

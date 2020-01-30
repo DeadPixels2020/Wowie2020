@@ -16,7 +16,7 @@ public class MainMenuManager : MonoBehaviour
     public void GoToPlayScene()
     {
         au.PlaySound("MenuClick");
-        SceneManager.LoadScene(sceneBuildIndex: 1);
+        SceneManager.LoadScene(sceneBuildIndex: 2);
     }
     public void GoToSettings()
     {

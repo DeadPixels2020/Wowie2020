@@ -62,17 +62,17 @@ public class GameManager : MonoBehaviour
 
     public void GoToBugScene()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 2);
+        SceneManager.LoadScene(sceneBuildIndex: 3);
     }
     public void restart()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 1);
+        SceneManager.LoadScene(sceneBuildIndex: 2);
         Time.timeScale = 1;
     }
     public void GoToMainMenu()
 	{
         Time.timeScale = 1;
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        SceneManager.LoadScene(sceneBuildIndex: 1);
 	}
     public void BuyTurret1()
     {

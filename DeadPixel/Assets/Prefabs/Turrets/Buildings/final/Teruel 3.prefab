@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2396623498229944681}
   - component: {fileID: 2396623498229944680}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396623498780631848}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3246905311147835591}
   - component: {fileID: 4595410388273596504}
   - component: {fileID: 6071871576281446682}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Teruel 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7231730814970075971}
   - component: {fileID: 3198992179242762095}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: TurelHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,10 +397,20 @@ PrefabInstance:
       propertyPath: position.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4326354196154684121, guid: 82183cfade789b242a705904bff1a0a3,
+        type: 3}
+      propertyPath: TransformIsDirty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326354196154684121, guid: 82183cfade789b242a705904bff1a0a3,
+        type: 3}
+      propertyPath: ContactFilter.layerMask.m_Bits
+      value: 5943
+      objectReference: {fileID: 0}
     - target: {fileID: 4809210041630000511, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5983634495620835728, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
@@ -410,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 5983634495620835741, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7954530417057485563, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
@@ -420,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 7954530417057485563, guid: 82183cfade789b242a705904bff1a0a3,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82183cfade789b242a705904bff1a0a3, type: 3}

@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
 
     GameObject enemy;
 
-    [SerializeField] private int enemiesToSpawn;
+    public int enemiesToSpawn;
     [SerializeField] private bool useRandomIntervals;
     [SerializeField,Tooltip("in seconds")] private float interval;
     [SerializeField,Tooltip("in seconds")] private float minInterval;
@@ -53,6 +53,7 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         error.SetActive(false);
+        enemiesToSpawn = 20;
     }
 
     private void createEnemy()

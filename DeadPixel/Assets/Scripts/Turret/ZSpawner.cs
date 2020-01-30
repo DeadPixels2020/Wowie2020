@@ -14,7 +14,7 @@ public class ZSpawner : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(sceneBuildIndex: 0);
+        SceneManager.LoadScene(sceneBuildIndex: 1);
     }
     public void Panel0()
     {

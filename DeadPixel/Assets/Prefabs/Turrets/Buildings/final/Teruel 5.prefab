@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2396623498229944681}
   - component: {fileID: 2396623498229944680}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2396623498780631848}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3246905311147835591}
   - component: {fileID: -3480259431880318160}
   - component: {fileID: 2110670573232086751}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Teruel 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7231730814970075971}
   - component: {fileID: 3198992179242762095}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: TurelHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
