@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69414141231816569}
   - component: {fileID: 69414141231816570}
+  - component: {fileID: 3822050429033840562}
   m_Layer: 0
   m_Name: A_
   m_TagString: Untagged
@@ -86,3 +87,17 @@ MonoBehaviour:
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
   showGraphs: 1
+--- !u!114 &3822050429033840562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69414141231816571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05bfd608a26158241b61d82e558bb536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 69414141231816570}
+  gridUpdateTime: 2
