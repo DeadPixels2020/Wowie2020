@@ -80,30 +80,4 @@ public class MainMenuManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         au.PlaySound("MusicMainMenu");
     }
-    //Ill do invisible here
-
-    public List<GameObject> Imag;
-
-    public void PutIn()
-    {
-        StartCoroutine(PutI(Imag[Random.Range(0, 13)]));
-    }
-
-    IEnumerator PutI(GameObject g)
-    {
-        g.SetActive(true);
-        yield return new WaitForSeconds(.6f);
-        g.SetActive(false);
-    }
-    private void Start()
-    {
-        foreach(GameObject a in Imag)
-        {
-            a.SetActive(false);
-        }
-    }
-    public void GoToSecretScene()
-    {
-        SceneManager.LoadScene(sceneBuildIndex: 2);
-    }
 }
