@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5152560371069868595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5152560371069868588}
+  - component: {fileID: 5152560371069868589}
+  - component: {fileID: 5152560371069868594}
+  m_Layer: 0
+  m_Name: BuildingModule 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5152560371069868588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152560371069868595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.11475298, y: 0.31867188, z: -6.1418986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5152560371069868589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152560371069868595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4964737c96c96ef49a108c72b24ec8d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingModel:
+  - {fileID: 11400000, guid: da67cd84f30b6d64a8bc2ea7c1418808, type: 2}
+  - {fileID: 11400000, guid: 88dc9a848912745bab6a7a8196092006, type: 2}
+  - {fileID: 11400000, guid: ca0d80a80466049459486a0661d58881, type: 2}
+  - {fileID: 11400000, guid: 84b34ea818cae4a2597a48e35e9e59c5, type: 2}
+  - {fileID: 11400000, guid: 63e395b869be545d7a228bfb555a1f18, type: 2}
+  - {fileID: 11400000, guid: 802a25e46d0ab453f8aa92c5c7a64f65, type: 2}
+  - {fileID: 11400000, guid: 68be21257241e490e9013ae1efb23b87, type: 2}
+  - {fileID: 11400000, guid: 14fd0c4b805a64ef591767bd0f9b01cb, type: 2}
+  cursor: {fileID: 5152560371069868594}
+  containerPrefab: {fileID: 2208689290669401413, guid: 5b21ecb2b6d6b43d98c45220fed9461c,
+    type: 3}
+  building: {fileID: 11400000, guid: da67cd84f30b6d64a8bc2ea7c1418808, type: 2}
+  rotationSensativity: 20
+--- !u!114 &5152560371069868594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152560371069868595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df1f746de209ac48ac958cb5874ca99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}
