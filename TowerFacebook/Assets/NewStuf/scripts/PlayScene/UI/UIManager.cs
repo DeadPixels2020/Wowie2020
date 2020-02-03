@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
             int.TryParse(w.GetComponentInChildren<TextMeshProUGUI>().text, out TestMat);
             Prices.Add(TestMat);
         }
+        AdjustWeapuns(PlayerPocket.Pocket.Matirial);
     }
 
     // Update is called once per frame

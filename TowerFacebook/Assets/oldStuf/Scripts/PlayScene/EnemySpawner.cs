@@ -8,8 +8,6 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameManager manager;
 
-    public GameObject error;
-
     [SerializeField] private GameObject target;
 
     public DayNightCycle cycle;
@@ -52,7 +50,6 @@ public class EnemySpawner : MonoBehaviour
     }
     private void Awake()
     {
-        error.SetActive(false);
         enemiesToSpawn = 20;
     }
 
@@ -93,7 +90,6 @@ public class EnemySpawner : MonoBehaviour
         if (cycle.CurrentNight == 5)
         {
             Time.timeScale = 0;
-            error.SetActive(true);
             StartCoroutine(BugStart());
         }
         enemy.SetActive(true);//They all start non active becouse of the prototype

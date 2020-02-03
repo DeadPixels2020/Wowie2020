@@ -6,58 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public AudioManager audio;
-    public GameObject AuOn;
-    public GameObject AuOff;
-    public UIPlaySceneManager UIPlay;
-
-
     public BuilderContoller builder;
-    /*[SerializeField] private GameObject wall;
-    [SerializeField] private GameObject trap;
-    [SerializeField] private GameObject turet1;
-    [SerializeField] private GameObject turet2;
-    [SerializeField] private GameObject turet3;
-    [SerializeField] private GameObject turet4;
-    [SerializeField] private GameObject turet5;
-    [SerializeField] private GameObject turet6;*/
 
-    public void StopAllSound()
-    {
-        PlayerPrefs.SetInt("au", 0);
-        audio.SetAllsound(false);
-        AuOn.SetActive(false);
-        AuOff.SetActive(true);
-    }
-    public void MakeAllSound()
-    {
-        PlayerPrefs.SetInt("au", 1);
-        audio.SetAllsound(true);
-        AuOn.SetActive(true);
-        AuOff.SetActive(false);
-    }
     private void Awake()
     {
         audio.Init();
-
-        if(!PlayerPrefs.HasKey("au"))
-        {
-            PlayerPrefs.SetInt("au", 1);
-            AuOff.SetActive(false);
-            AuOn.SetActive(true);
-        }
-
-        if(PlayerPrefs.GetInt("au") == 0)
-        {
-            audio.SetAllsound(false);
-            AuOn.SetActive(false);
-            AuOff.SetActive(true);
-        }
-        if (PlayerPrefs.GetInt("au") == 1)
-        {
-            audio.SetAllsound(true);
-            AuOn.SetActive(true);
-            AuOff.SetActive(false);
-        }
+        audio.SetAllsound(true);
     }
 
     public void GoToBugScene()
@@ -76,90 +30,34 @@ public class GameManager : MonoBehaviour
 	}
     public void BuyTurret1()
     {
-        if (PlayerPocket.Pocket.Matirial >= 10)
-        {
-            builder.Make(0);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(0);
     }
     public void BuyTurret2()
     {
-        if (PlayerPocket.Pocket.Matirial >= 20)
-        {
-            builder.Make(1);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(1);
     }
     public void BuyTurret3()
     {
-        if (PlayerPocket.Pocket.Matirial >= 40)
-        {
-            builder.Make(2);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(2);
     }
     public void BuyTurret4()
     {
-        if (PlayerPocket.Pocket.Matirial >= 60)
-        {
-            builder.Make(3);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(3);
     }
     public void BuyTurret5()
     {
-        if (PlayerPocket.Pocket.Matirial >= 100)
-        {
-            builder.Make(4);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(4);
     }
     public void BuyTurret6()
     {
-        if (PlayerPocket.Pocket.Matirial >= 150)
-        {
-            builder.Make(5);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(5);
     }
     public void BuyTrap()
     {
-        if (PlayerPocket.Pocket.Matirial >= 40)
-        {
-            builder.Make(6);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(6);
     }
     public void BuyBarrier()
     {
-        if (PlayerPocket.Pocket.Matirial >= 20)
-        {
-            builder.Make(7);
-        }
-        else
-        {
-            UIPlay.OpenNoMatPanel();
-        }
+        builder.Make(7);
     }
 }

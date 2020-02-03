@@ -8,10 +8,12 @@ public class UIPlaySceneManager : MonoBehaviour
 
     public Animator PLaySceneAnime;
     public GameObject DethUI;
+    public GameObject ErrorPanel;
 
     private void Awake()
     {
         DethUI.SetActive(false);
+        ErrorPanel.SetActive(false);
     }
     public void OpenWeapons()
     {
