@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
-[RequireComponent(typeof(Light2D))]
+[RequireComponent(typeof(UnityEngine.Experimental.Rendering.Universal.Light2D))]
 public class DayNightCycle : MonoBehaviour
 {
     public AudioManager au;
@@ -12,7 +12,7 @@ public class DayNightCycle : MonoBehaviour
     public int CurrentNight{get => currentNight;}
     public float timer;
 
-    private Light2D _light;
+    private UnityEngine.Experimental.Rendering.Universal.Light2D _light;
     [SerializeField] private float chengScale;
     [SerializeField] private bool invert;
 
@@ -31,7 +31,7 @@ public class DayNightCycle : MonoBehaviour
 
     private void Awake()
     {
-        _light = GetComponent<Light2D>();
+        _light = GetComponent<UnityEngine.Experimental.Rendering.Universal.Light2D>();
     }
 
     private void Start() {
